@@ -1,0 +1,28 @@
+<div class="ip">
+<input type="text" #minput placeholder="Enter the contact number"><br>
+    <button (click)="sendContact(minput.value)">Submit</button>
+</div>
+<div class="ip1">
+<input type="text" #minput1 placeholder="Enter the otp"><br>
+    <button (click)="receiveOtp(minput1.value)">Submit</button>
+</div>
+
+<div class="ip2">
+    <table>
+        <tr>
+            
+            <th>Page</th>
+            <th>Search</th>
+            
+
+        </tr>
+        
+        <tr *ngFor="let p of product">
+           
+            <td>{{p.page|json}}</td>
+            <td>{{p.search|json}}</td>
+            
+        </tr>
+        
+    </table>
+</div>
