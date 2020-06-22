@@ -7,6 +7,7 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 })
 export class EmployeeService {
   data:any;
+  data2:any;
 
   constructor(public ob:HttpClient) { 
 
@@ -14,27 +15,26 @@ export class EmployeeService {
  
   sendContactNum(num){
     
-    this.data = {"phone": num}
+    this.data = {"phone":"+91"+num}
     var h = new HttpHeaders({'content-type':'application/json'}); 
-    return this.ob.post("http://ec2-13-59-62-104.us-east-2.compute.amazonaws.com:8090/api/v1/user/get_otp/",this.data);
+    return this.ob.post("http://ec2-13-59-62-104.us-east-2.compute.amazonaws.com:8090/api/v1/user/get_otp/",this.data,{headers:h});
   
   }
 
-  verifyOtp(otp){
-    // var num = parseInt("919496017547")
-    var otp1 = parseInt(otp)
-    this.data = {"phone":"+919496017547","password": otp1}
-    var h=new HttpHeaders({'content-type':'application/json'}); 
-    return this.ob.post("http://ec2-13-59-62-104.us-east-2.compute.amazonaws.com:8090/api/v1/user/get_access_token/",this.data);
-  
-  }
-
-  productListing(){
+  verifyOtp(otp,num){
     
-    // this.data = "" 
-    console.log(this.data);
-    var h=new HttpHeaders({'content-type':'application/json'});
-    return this.ob.get("http://ec2-13-59-62-104.us-east-2.compute.amazonaws.com:8090/api/v1/fish/?page=2&search=rohu");
+    var otp1 = parseInt(otp)
+    this.data = {"username":"+91"+num,"password":otp1} 
+    var h=new HttpHeaders({'content-type':'application/json'}); 
+    return this.ob.post("http://ec2-13-59-62-104.us-east-2.compute.amazonaws.com:8090/api/v1/user/get_access_token/",this.data,{headers:h});
+  
+  }
+
+  productListing(data2,pageno){
+    
+    // console.log(data2);
+    var h=new HttpHeaders({'Authorization':'JWT '+data2});
+    return this.ob.get("http://ec2-13-59-62-104.us-east-2.compute.amazonaws.com:8090/api/v1/fish/?page="+pageno+"&search=",{headers:h});
 
   
   }

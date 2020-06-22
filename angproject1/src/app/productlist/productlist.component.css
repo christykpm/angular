@@ -1,6 +1,14 @@
+th, td {
+    padding: 15px;
+  }
+
+  table, th, td {
+    border: 1px solid white;
+    border-collapse: collapse;
+  }
+
 .input1
 {
-    /* margin: 0em 33%; */
     font-family:Helvetica Neue, Helvetica, Arial, sans-serif;
     font-size:18px;
     line-height:1.2;
@@ -15,7 +23,7 @@
 .ip{margin: 1em 33%;}
 
 .ip1{ margin-left: 33%;}
-.ip2{ color: antiquewhite; margin: 0em 45%;}
+.ip2{ color: antiquewhite; margin-left: 6em;}
 .sub{
     margin: 4em 33%;
     font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
@@ -40,4 +48,17 @@
     -o-transition: all 0.4s;
     -moz-transition: all 0.4s;
     transition: all 0.4s;
+}
+
+.button{
+    font-family:Helvetica Neue, Helvetica, Arial, sans-serif;
+    font-size:18px;
+    line-height:1.2;
+    color:white;
+    display:block;
+    width:70px;
+    background:red;
+    height: 50px;
+    border-radius: 4px;
+    padding: 0px;
 }

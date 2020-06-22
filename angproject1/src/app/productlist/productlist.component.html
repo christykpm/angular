@@ -1,0 +1,36 @@
+<div style="display: flex;text-align: center;margin: 1em 33%;">
+
+<input class="input1" type="text" #pagination placeholder="Enter the page number" style="width:226px;height: 35px;">
+<button class="button" (click)="productList(pagination.value)" style="height:37px;width:59px; ">Go</button>
+
+</div>
+
+<div class="ip2">
+<table>
+    <tr>
+
+            <th>Name</th>
+            <th>maxOrderQuantity</th>
+            <th>minOrderQuantity</th>
+            <th>Price</th>
+            <th>priceAfterDiscount</th>
+            <th>priceCurrency</th>
+            <th>image</th>
+            
+
+        </tr>
+        
+        <tr *ngFor="let p of product">
+           
+            <td>{{p.name}}</td>
+            <td>{{p.max_order_quantity}}</td>
+            <td>{{p.min_order_quantity}}</td>
+            <td>{{p.price}}</td>
+            <td>{{p.price_after_discount}}</td>
+            <td>{{p.price_currency}}</td>
+            <td><img src="{{p.image}}" style="height: 51px;width: 137px;"></td>
+            
+        </tr>
+    
+</table>
+</div>

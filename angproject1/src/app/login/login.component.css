@@ -1,6 +1,5 @@
 .input1
 {
-    /* margin: 0em 33%; */
     font-family:Helvetica Neue, Helvetica, Arial, sans-serif;
     font-size:18px;
     line-height:1.2;
@@ -10,10 +9,9 @@
     background:#333;
     height: 50px;
     border-radius: 4px;
-    padding: 0 0px 0 18px;
+    padding: 0 0px 0 8px;
 }
 .ip{margin: 1em 33%;}
-
 .ip1{ margin-left: 33%;}
 .ip2{ color: antiquewhite; margin: 0em 45%;}
 .sub{
@@ -22,7 +20,6 @@
     font-size: 16px;
     line-height: 1.5;
     color: #fff;
-  
     margin-top:42px;
     width: 120px;
     height: 50px;

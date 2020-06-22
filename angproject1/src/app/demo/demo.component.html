@@ -1,26 +1,41 @@
 <div class="ip">
-<input type="text" #minput placeholder="Enter the contact number"><br>
-    <button (click)="sendContact(minput.value)">Submit</button>
+<input class="input1" type="text" #minput placeholder="Enter the contact number"><br>
+    <button (click)="sendContact(minput.value)" class="input1" style="width: 120px; background-color: red;" >Submit</button>
 </div>
 <div class="ip1">
-<input type="text" #minput1 placeholder="Enter the otp"><br>
-    <button (click)="receiveOtp(minput1.value)">Submit</button>
+<input class="input1" type="text" #minput1 placeholder="Enter the otp" style="margin: 0em 0;"><br>
+    <button style="margin: 0em 0;background-color: red;width: 120px;" (click)="receiveOtp(minput1.value)" class="input1">Submit</button>
 </div>
+
+<!-- <div class="ip1">
+    
+        <button style="margin: 0em 0;background-color: red;width: 120px;" (click)="productList()" class="input1">Submit</button>
+    </div> -->
 
 <div class="ip2">
     <table>
         <tr>
             
-            <th>Page</th>
-            <th>Search</th>
+            <th>Name</th>
+            <th>maxOrderQuantity</th>
+            <th>minOrderQuantity</th>
+            <th>Price</th>
+            <th>priceAfterDiscount</th>
+            <th>priceCurrency</th>
+            <th>image</th>
             
 
         </tr>
         
         <tr *ngFor="let p of product">
            
-            <td>{{p.page|json}}</td>
-            <td>{{p.search|json}}</td>
+            <td>{{p.name}}</td>
+            <td>{{p.max_order_quantity}}</td>
+            <td>{{p.min_order_quantity}}</td>
+            <td>{{p.price}}</td>
+            <td>{{p.price_after_discount}}</td>
+            <td>{{p.price_currency}}</td>
+            <td><img src="{{p.image}}"></td>
             
         </tr>
         

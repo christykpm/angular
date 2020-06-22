@@ -6,11 +6,17 @@ import { DemoComponent } from './demo/demo.component';
 import {FormsModule } from '@angular/forms';
 import { EmployeeService } from './employee.service';
 import { HttpClientModule} from '@angular/common/http';
+import { LoginComponent } from './login/login.component';
+import { GetotpComponent } from './getotp/getotp.component';
+import { ProductlistComponent } from './productlist/productlist.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    DemoComponent
+    DemoComponent,
+    LoginComponent,
+    GetotpComponent,
+    ProductlistComponent
 
   ],
   imports: [
